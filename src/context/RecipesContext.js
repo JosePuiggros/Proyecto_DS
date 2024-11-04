@@ -14,23 +14,41 @@ export const useRecipes = () => {
 export const RecipeProvider = ({ children }) => {
   const [recipes, setRecipes] = useLocalStorage("recipes", []);
 
-  const createRecipe = (titulo, descripcion) =>
-    setRecipes([
-      ...recipes, 
-      {
-        titulo,
-        descripcion,
-        id: uuid(),
-      },
-    ]);
+  // const createRecipe = (titulo, ingredientes,pasos) =>
+  //   setRecipes([
+  //     ...recipes, 
+  //     {
+  //       titulo,
+  //       ingredientes,
+  //       pasos,
+  //       id: uuid(),
+  //     },
+  //   ]);
 
   const deleteRecipe = (id) =>
     setRecipes(
       [...recipes.filter(recipe => recipe.id !== id)])
   
-  const updateRecipe = (id, actualizacion) => 
-    setRecipes([...recipes.map(recipe => recipe.id === id ? {...recipe, ...actualizacion} : recipe)]);
-  
+  // const updateRecipe = (id, actualizacion) => 
+  //   setRecipes([...recipes.map(recipe => recipe.id === id ? {...recipe, ...actualizacion} : recipe)]);
+  // // En tu contexto RecipesContext
+
+  const createRecipe = (titulo, ingredientes, direcciones) => {
+    const newRecipe = {
+      titulo,
+      ingredientes,
+      direcciones,
+      id: uuid(),
+    };
+    setRecipes([...recipes, newRecipe]);
+  };
+
+  const updateRecipe = (id, data) => {
+    const updatedRecipes = recipes.map(recipe => 
+        recipe.id === id ? { ...recipe, ...data } : recipe
+    );
+    setRecipes(updatedRecipes);
+  };
 
 
 
