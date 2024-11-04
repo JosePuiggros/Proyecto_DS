@@ -1,5 +1,5 @@
 import {useRouter} from "next/navigation";
-import { useRecipes } from "@/context/RecipesContext";  
+import { useRecipes } from "../context/RecipesContext";  
 import {toast} from "react-hot-toast";
 
 export const RecipeCard = ({ recipe }) => {

@@ -12,6 +12,10 @@ function Page() {
           no dudes en publicarla.
         </p>
         <a 
+          href="/login" 
+          className="bg-blue-500 hover:bg-blue-400 text-gray-50 font-bold py-2 px-4 rounded"
+          >Registrarse</a>
+        <a 
           href="/recipes" 
           className="bg-blue-500 hover:bg-blue-400 text-gray-50 font-bold py-2 px-4 rounded"
           >Ir a ver las recetas</a>
