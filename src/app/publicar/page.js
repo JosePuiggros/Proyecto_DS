@@ -30,6 +30,7 @@ const onSubmit = handleSubmit((data) => {
         setValue("titulo", recipeFound.titulo);
         setValue("descripcion", recipeFound.direcciones);
         setValue("ingredientes", recipeFound.ingredientes);
+        setValue("direcciones", recipeFound.direcciones);
       }  
     }
   }, [])

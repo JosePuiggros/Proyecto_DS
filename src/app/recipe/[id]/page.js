@@ -40,6 +40,12 @@ const RecipePage = () => {
                 <h2 className="font-bold text-2xl mb-4">Pasos</h2>
                 <ol className="text-lg" style={{ whiteSpace: 'pre-line' }}>{pasosList}</ol>
             </div>
+            <button 
+                onClick={() => window.location.href = '/recipes'} 
+                className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+            >
+                Volver a Recetas
+            </button>
         </div>
     );
 };
