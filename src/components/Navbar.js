@@ -1,19 +1,24 @@
 "use client";
-import {useRouter} from "next/navigation";
 import Link from "next/link"  
 
 export function Navbar() {
-  const router = useRouter();
+
   return (
-    <header className="flex justify-between items-center bg-gray-800 px-28 py-3">
+    <header className="flex items-center justify-between bg-mint px-28 py-3">
+      <div className="flex-1 text-left">
+        <h2 className="text-black">Idioma</h2>
+      </div>
+      <div className="flex-1 text-center">
         <Link href="/">
-        <h1 className="font-bold text-3xl text-white">Recetario</h1>
+          <h1 className="font-bold text-3xl text-black">Recetario</h1>
         </Link>
-        <div>
-            <button onClick={() => router.push("/publicar")} 
-              className="bg-green-500 hover:bg-green-400 px-5 py-2
-              text-gray-50 font-bold- rounded-sm inline-flex item-center">Publicar Receta</button>
-        </div>
+      </div>
+      <div className="flex-1 text-right">
+        <a 
+          href="/login" 
+          className="bg-earth hover:bg-gray-600 text-gray-50 font-bold py-2 px-4 rounded"
+        >Registrarse</a>
+      </div>
     </header>
   );
 }

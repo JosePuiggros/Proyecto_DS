@@ -10,6 +10,11 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        mint: '#A8D5BA', // Verde menta
+        cream: '#F6F6EB', // Blanco crema
+        beige: '#E8C7A1', // Beige cálido
+        earth: '#7D5A50', // Marrón tierra
+        orange: '#F4A259', // Naranja
       },
     },
   },
