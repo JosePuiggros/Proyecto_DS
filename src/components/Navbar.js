@@ -10,14 +10,14 @@ export function Navbar() {
       </div>
       <div className="flex-1 text-center">
         <Link href="/">
-          <h1 className="font-bold text-3xl text-black">Recetario</h1>
+          <h1 className="font-bold text-3xl text-black">ReceFits</h1>
         </Link>
       </div>
       <div className="flex-1 text-right">
         <a 
           href="/login" 
           className="bg-earth hover:bg-gray-600 text-gray-50 font-bold py-2 px-4 rounded"
-        >Registrarse</a>
+        >Iniciar Sesión</a>
       </div>
     </header>
   );
