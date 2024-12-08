@@ -54,12 +54,12 @@ export default function LoginPage () {
 //   )
 // }
 return (
-  <div className="flex flex-col items-center justify-center min-h-screen bg-red p-0">
+  <div className="flex flex-col items-center justify-center min-h-screen !text-black p-0">
     <Form
       title="Inicia Sesión"
       onSubmit={login}
       description="Formulario para iniciar sesión"
-      className="w-full max-w-md bg-white rounded-lg shadow-md p-8 flex flex-col gap-4 text-black"
+      className="w-full max-w-md bg-white rounded-lg shadow-md p-8 flex flex-col gap-4 !text-black"
     >
       <Form.Input
         label="Correo"

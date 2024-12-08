@@ -18,7 +18,7 @@ export default function LoginPage () {
   }
 
   return (
-    <>
+    <div className="flex flex-col items-center justify-center min-h-screen !text-black p-0">
       <Form
         title='Recuperar contraseña'
         description='Formulario para recuperar tu contraseña'
@@ -41,6 +41,6 @@ export default function LoginPage () {
           link='/'
         />
       </Form>
-    </>
+    </div>
   )
 }

@@ -15,6 +15,7 @@ module.exports = {
         beige: '#E8C7A1', // Beige cálido
         earth: '#7D5A50', // Marrón tierra
         orange: '#F4A259', // Naranja
+        black: "#000000", // negro
       },
     },
   },
