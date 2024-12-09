@@ -1,8 +1,10 @@
 import {useRouter} from "next/navigation";
 import { useRecipes } from "../context/RecipesContext";  
 import {toast} from "react-hot-toast";
+import { useTranslation, withTranslation, Trans } from 'react-i18next';
 
 export const RecipeCard = ({ recipe }) => {
+    const { t, i18n } = useTranslation();
     const router = useRouter();
     const { deleteRecipe } = useRecipes();
 
@@ -46,7 +48,7 @@ export const RecipeCard = ({ recipe }) => {
         router.push(`/editar/${recipe.id}`);
       }}
     >
-      Editar
+      {t("editar")}
     </button>
     <button 
       className="bg-beige hover:bg-orange px-4 py-2 text-black font-bold rounded transition-colors"
@@ -55,11 +57,11 @@ export const RecipeCard = ({ recipe }) => {
         const accept = window.confirm("¿Estás seguro de que deseas eliminar esta receta?");
         if (accept) {
           deleteRecipe(recipe.id);
-          toast.success("Receta eliminada correctamente");
+          toast.success(t("recetaEliminada"));
         }
       }}
     >
-      Eliminar
+      {t("eliminar")}
     </button>
   </div>
 </div>

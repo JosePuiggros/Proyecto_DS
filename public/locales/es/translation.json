@@ -1,0 +1,18 @@
+{
+    "mensajeBienvenida": "¡Bienvenido a Recetario! Aquí podrás encontrar recetas de todo tipo, desde las más sencillas hasta las más elaboradas. Si tienes alguna receta que te gustaría compartir, no dudes en publicarla.",
+    "inicioSesion": "Iniciar sesión",
+    "publicarReceta": "Publicar receta",
+    "verRecetas": "Ver recetas",
+    "nuevaReceta": "Nueva receta",
+    "titulo": "Título",
+    "ingredientes": "Ingredientes",
+    "pasos": "Pasos",
+    "guardar": "Guardar",
+    "publicar": "Publicar",
+    "requerido": "Este campo es requerido",
+    "recetaCreada": "Receta creada",
+    "eliminar": "Eliminar",
+    "editar": "Editar",
+    "recetaActualizada": "Receta actualizada",
+    "recetaEliminada": "Receta eliminada"
+  }

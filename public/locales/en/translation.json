@@ -1,0 +1,18 @@
+{
+    "mensajeBienvenida": "Welcome to Recipe Book! Here you can find recipes of all kinds, from the simplest to the most elaborate. If you have a recipe you would like to share, feel free to post it.",
+    "inicioSesion": "Log in",
+    "publicarReceta": "Post recipe",
+    "verRecetas": "View recipes",
+    "nuevaReceta": "New recipe",
+    "titulo": "Title",
+    "ingredientes": "Ingredients",
+    "pasos": "Steps",
+    "guardar": "Save",
+    "publicar": "Post",
+    "requerido": "This field is required",
+    "recetaCreada": "Recipe created",
+    "eliminar": "Delete",
+    "editar": "Edit",
+    "recetaActualizada": "Recipe updated",
+    "recetaEliminada": "Recipe deleted"
+  }

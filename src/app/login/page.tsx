@@ -3,8 +3,10 @@
 import { Form } from '../../components/Form'
 import { useAuthFetch } from '../../hooks/useAuthFetch'
 import { useLoading } from '../../hooks/useLoading'
+import { useTranslation, withTranslation, Trans } from 'react-i18next';
 
 export default function LoginPage () {
+  const { t, i18n } = useTranslation();
   const { finishLoading, isLoading, startLoading } = useLoading()
   const authFetch = useAuthFetch()
 
@@ -56,15 +58,15 @@ export default function LoginPage () {
 return (
   <div className="flex flex-col items-center justify-center min-h-screen !text-black p-0">
     <Form
-      title="Inicia Sesión"
+      title={t("Iniciar Sesion")}
       onSubmit={login}
-      description="Formulario para iniciar sesión"
+      description={t("Formulario para iniciar sesión")}
       className="w-full max-w-md bg-white rounded-lg shadow-md p-8 flex flex-col gap-4 !text-black"
     >
       <Form.Input
-        label="Correo"
+        label={t("correo")}
         name="email"
-        placeholder="Ingresa tu correo..."
+        placeholder={t("Ingrese su correo")}
         className="bg-gray-100 text-black placeholder-gray-500"
       />
       <Form.Input
@@ -74,7 +76,7 @@ return (
         placeholder="Ingresa tu contraseña..."
         className="bg-gray-100 text-black placeholder-gray-500"
       />
-      <Form.SubmitButton buttonText="Iniciar Sesión" isLoading={isLoading} />
+      <Form.SubmitButton buttonText={t("Iniciar Sesión")} isLoading={isLoading} />
       <Form.Footer
         description="¿Te olvidaste tu contraseña?"
         link="/forget-password"

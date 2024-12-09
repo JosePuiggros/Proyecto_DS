@@ -1,8 +1,10 @@
 "use client";
+import React, { Component, Suspense } from 'react';
 import {useRecipes} from "../context/RecipesContext";
 import {RecipeCard} from "../components/RecipeCard"
 import {useRouter} from "next/navigation";
-// import { useTranslation } from "react-i18next";
+import { useTranslation, withTranslation, Trans } from 'react-i18next';
+import { MyCompFromOtherLib } from './other-lib/component';
 
 // function Page() {
 //   // const {t} = useTranslation();
@@ -38,6 +40,7 @@ import {useRouter} from "next/navigation";
 
 function Page() {
   const router = useRouter();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="flex flex-col items-center justify-start h-screen bg-cream text-white px-4">
@@ -52,9 +55,7 @@ function Page() {
 
       {/* Texto descriptivo */}
       <p className="text-center text-black text-base sm:text-lg max-w-md sm:max-w-lg mt-4 mb-6">
-        ¡Bienvenido a Recetario! Aquí podrás encontrar recetas de todo tipo, desde las más
-        sencillas hasta las más elaboradas. Si tienes alguna receta que te gustaría compartir,
-        no dudes en publicarla.
+        {t("mensajeBienvenida")}
       </p>
 
       {/* Botones de acción */}
@@ -63,17 +64,31 @@ function Page() {
           href="/recipes"
           className="bg-beige hover:bg-orange text-gray-600 font-bold py-3 px-5 rounded transition text-base text-center w-full"
         >
-          Ir a ver las recetas
+          {t("verRecetas")}
         </a>
         <button
           onClick={() => router.push("/publicar")}
           className="bg-beige hover:bg-orange py-3 px-5 text-gray-600 font-bold rounded transition text-base text-center w-full"
         >
-          Publicar Receta
+          {t("publicarReceta")}
         </button>
       </div>
     </div>
   );
 }
 
-export default Page;
+const Loader = () => (
+  <div className="App">
+    <img src="logo.svg" className="App-logo" alt="logo" />
+    <div>loading...</div>
+  </div>
+);
+
+
+export default function page() {
+  return (
+    <Suspense fallback={<Loader />}>
+      <Page />
+    </Suspense>
+  );
+}
