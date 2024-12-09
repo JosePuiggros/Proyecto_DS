@@ -18,7 +18,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
-      <body className={inter.className}>
+      {/* <body className={inter.className}> */}
+      <body className={`${inter.className} flex flex-col !min-h-screen`}>
         <RecipeProvider>
           <NotificationProvider>
             <Navbar />
