@@ -33,12 +33,13 @@ export const RecipeProvider = ({ children }) => {
   //   setRecipes([...recipes.map(recipe => recipe.id === id ? {...recipe, ...actualizacion} : recipe)]);
   // // En tu contexto RecipesContext
 
-  const createRecipe = (titulo, ingredientes, direcciones) => {
+  const createRecipe = (titulo, ingredientes, direcciones,foto) => {
     const newRecipe = {
       titulo,
       ingredientes,
       direcciones,
       id: uuid(),
+      foto,
     };
     setRecipes([...recipes, newRecipe]);
   };

@@ -18,7 +18,7 @@ const onSubmit = handleSubmit((data) => {
       updateRecipe(params.id, data);
       toast.success(t("recetaActualizada"));
   } else {
-      createRecipe(data.titulo, data.ingredientes, data.direcciones);
+      createRecipe(data.titulo, data.ingredientes, data.direcciones, data.foto);
       toast.success(t("recetaCreada"));
   }
   router.push("/recipes");
@@ -32,6 +32,7 @@ const onSubmit = handleSubmit((data) => {
         setValue("descripcion", recipeFound.direcciones);
         setValue("ingredientes", recipeFound.ingredientes);
         setValue("direcciones", recipeFound.direcciones);
+        setValue("foto", recipeFound.foto || "");
       }  
     }
   }, [])
@@ -55,7 +56,10 @@ const onSubmit = handleSubmit((data) => {
           {...register("direcciones", {required: true})}
         />
         {errors.descripcion && <span>{t("requerido")}</span>}
-        
+        <input className="text-black py-3 px-4 mb-2 block focus:outline-none w-full" 
+          placeholder="Link de la foto (opcional)"  
+          {...register("foto", {required: false})}
+        />
         <div className="flex justify-center">
           <button 
             className="bg-beige hover:bg-orange px-3 py-1 text-gray-50 inline-flex item-center font-bold rounded-sm"
