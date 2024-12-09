@@ -19,7 +19,8 @@ export default function LoginPage () {
   }
 
   return (
-    <>
+    <div className="flex flex-col items-center justify-center min-h-screen !text-black p-0 mt-0">
+
       <Form
         title='Registrate'
         onSubmit={register}
@@ -51,6 +52,6 @@ export default function LoginPage () {
           link='/'
         />
       </Form>
-    </>
+      </div>
   )
 }
