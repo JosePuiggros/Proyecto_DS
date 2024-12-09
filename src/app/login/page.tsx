@@ -56,7 +56,7 @@ export default function LoginPage () {
 //   )
 // }
 return (
-  <div className="flex flex-col items-center justify-center min-h-screen !text-black p-0">
+  <div className="flex flex-col items-center justify-top min-h-screen !text-black p-0">
     <Form
       title={t("Iniciar Sesion")}
       onSubmit={login}

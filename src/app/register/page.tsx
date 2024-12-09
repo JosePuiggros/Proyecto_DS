@@ -19,7 +19,7 @@ export default function LoginPage () {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen !text-black p-0 mt-0">
+    <div className="flex flex-col items-center justify-top min-h-screen !text-black p-0 mt-0">
 
       <Form
         title='Registrate'
@@ -49,7 +49,7 @@ export default function LoginPage () {
         <Form.Footer
           description='Ya tienes cuenta?'
           textLink='Inicia Sesión'
-          link='/'
+          link='/login'
         />
       </Form>
       </div>
