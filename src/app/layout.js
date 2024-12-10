@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="es">
       {/* <body className={inter.className}> */}
       <body className={`${inter.className} flex flex-col !min-h-screen !m-0`}>
-        <AuthProvider>
+        {/* <AuthProvider> */}
           <RecipeProvider>
             <NotificationProvider>
               <Navbar />
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
               <Toaster />
             </NotificationProvider>
           </RecipeProvider>
-        </AuthProvider>
+        {/* </AuthProvider> */}
       </body>
     </html>
   );

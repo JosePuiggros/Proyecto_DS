@@ -16,22 +16,27 @@
 //   return children; // Muestra el contenido si está autenticado
 // }
 
-'use client';
-import { useAuth } from '../context/AuthContext';
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
 
-export default function ProtectedRoute({ children }) {
-  const { isAuthenticated } = useAuth();
-  const router = useRouter();
 
-  useEffect(() => {
-    if (!isAuthenticated) {
-      // Redirigir al login si no está autenticado
-      router.push('/login');
-    }
-  }, [isAuthenticated, router]);
+// --------------------------------------------------------------
 
-  // Mostrar el contenido solo si está autenticado
-  return isAuthenticated ? children : null;
-}
+
+// 'use client';
+// import { useAuth } from '../context/AuthContext';
+// import { useRouter } from 'next/navigation';
+// import { useEffect } from 'react';
+
+// export default function ProtectedRoute({ children }) {
+//   const { isAuthenticated } = useAuth();
+//   const router = useRouter();
+
+//   useEffect(() => {
+//     if (!isAuthenticated) {
+//       // Redirigir al login si no está autenticado
+//       router.push('/login');
+//     }
+//   }, [isAuthenticated, router]);
+
+//   // Mostrar el contenido solo si está autenticado
+//   return isAuthenticated ? children : null;
+// }
