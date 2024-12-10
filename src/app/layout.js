@@ -3,6 +3,7 @@ import { NotificationProvider } from '../context/NotificationContext';
 import {Navbar} from "../components/Navbar"
 import {Toaster} from "./Toaster"
 import {Layout} from "../components/Layout"
+import { AuthProvider } from '../context/AuthContext';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
@@ -20,17 +21,19 @@ export default function RootLayout({ children }) {
     <html lang="es">
       {/* <body className={inter.className}> */}
       <body className={`${inter.className} flex flex-col !min-h-screen !m-0`}>
-        <RecipeProvider>
-          <NotificationProvider>
-            <Navbar />
-            <Layout>
-              <main>
-                {children}
-              </main>
-            </Layout>
-            <Toaster />
-          </NotificationProvider>
-        </RecipeProvider>
+        <AuthProvider>
+          <RecipeProvider>
+            <NotificationProvider>
+              <Navbar />
+              <Layout>
+                <main>
+                  {children}
+                </main>
+              </Layout>
+              <Toaster />
+            </NotificationProvider>
+          </RecipeProvider>
+        </AuthProvider>
       </body>
     </html>
   );

@@ -4,6 +4,7 @@ import { Form } from '../../components/Form'
 import { useAuthFetch } from '../../hooks/useAuthFetch'
 import { useLoading } from '../../hooks/useLoading'
 import { useTranslation, withTranslation, Trans } from 'react-i18next';
+import { useRouter } from 'next/navigation'
 
 export default function LoginPage () {
   const { t, i18n } = useTranslation();
@@ -14,47 +15,12 @@ export default function LoginPage () {
     startLoading()
     await authFetch({
       endpoint: 'login',
-      redirectRoute: '/home',
+      redirectRoute: '/protegida',
       formData
     })
     finishLoading()
   }
 
-//   return ( // este es el original
-//     <>
-//       <Form
-//         title='Inicia Sesión'
-//         onSubmit={login}
-//         description='Formulario para iniciar sesión'
-//       >
-//         <div className='my-[10px] flex flex-col gap-4'>
-//           <Form.Input
-//             label='Correo'
-//             name='email'
-//             placeholder='Ingresa tu correo...'
-//           />
-//           <Form.Input
-//             placeholder='Ingresa tu contraseña...'
-//             label='Contraseña'
-//             name='password'
-//             type='password'
-//           />
-//         </div>
-//         <Form.SubmitButton buttonText='Iniciar Sesión' isLoading={isLoading} />
-//         <Form.Footer
-//           description='Te olvidate tu contraseña?'
-//           link='/forget-password'
-//           textLink='Recuperar contraseña'
-//         />
-//         <Form.Footer
-//           description='Aun no tienes cuenta?'
-//           link='/register'
-//           textLink='Registrate'
-//         />
-//       </Form>
-//     </>
-//   )
-// }
 return (
   <div className="flex flex-col items-center justify-top min-h-screen !text-black p-0">
     <Form
