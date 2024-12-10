@@ -66,12 +66,12 @@ function Page() {
         >
           {t("verRecetas")}
         </a>
-        <button
+        {/* <button
           onClick={() => router.push("/publicar")}
           className="bg-beige hover:bg-orange py-3 px-5 text-gray-600 font-bold rounded transition text-base text-center w-full"
         >
           {t("publicarReceta")}
-        </button>
+        </button> */}
       </div>
     </div>
   );

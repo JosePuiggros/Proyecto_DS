@@ -4,31 +4,35 @@ import { Form } from '../../components/Form'
 import { useAuthFetch } from '../../hooks/useAuthFetch'
 import { useLoading } from '../../hooks/useLoading'
 import { useTranslation, withTranslation, Trans } from 'react-i18next';
-import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/router'
+import { useAuth } from '../../context/AuthContext';
 import router from 'next/router';
 
 export default function LoginPage () {
   const { t, i18n } = useTranslation();
   const { finishLoading, isLoading, startLoading } = useLoading()
-  const authFetch = useAuthFetch()
+  const authFetch = useAuthFetch();
+  const { login } = useAuth();
+  // const router = useRouter();
 
-  const login = async (formData: any) => {
+  const handleLogin = async (formData: any) => {
     startLoading()
-    // await authFetch({
-    //   endpoint: 'login',
-    //   redirectRoute: '/protegida',
-    //   formData
-    // })
-    // finishLoading()
     await authFetch({
       endpoint: 'login',
+      redirectRoute: '/logeado',
       formData
-    });
-    finishLoading();
-    const token = 'fictitious-token'; // Almacenar un token ficticio
-    login(token); // Guardar el token en el contexto de autenticación
-    router.push('/protegida');
+    })
+    finishLoading()
   }
+  //   await authFetch({
+  //     endpoint: 'login',
+  //     formData
+  //   });
+  //   finishLoading();
+  //   const token = 'fictitious-token'; // Almacenar un token ficticio
+  //   login(token); // Guardar el token en el contexto de autenticación
+  //   router.push('/protegida');
+  // }
 
 return (
   <div className="flex flex-col items-center justify-top min-h-screen !text-black p-0">
