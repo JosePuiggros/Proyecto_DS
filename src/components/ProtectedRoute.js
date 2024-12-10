@@ -8,7 +8,7 @@ export default function ProtectedRoute({ children }) {
 
   if (!isAuthenticated) {
     if (typeof window !== 'undefined') {
-      router.push('/login'); // Redirige al login si no está autenticado
+    //   router.push('/login'); // Redirige al login si no está autenticado
     }
     return null; // Mientras redirige, no muestra nada
   }
