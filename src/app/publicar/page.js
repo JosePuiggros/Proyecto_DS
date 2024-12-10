@@ -57,7 +57,7 @@ const onSubmit = handleSubmit((data) => {
         />
         {errors.descripcion && <span>{t("requerido")}</span>}
         <input className="text-black py-3 px-4 mb-2 block focus:outline-none w-full" 
-          placeholder="Link de la foto (opcional)"  
+          placeholder={t("foto")}  
           {...register("foto", {required: false})}
         />
         <div className="flex justify-center">
