@@ -5,6 +5,7 @@ import { useAuthFetch } from '../../hooks/useAuthFetch'
 import { useLoading } from '../../hooks/useLoading'
 import { useTranslation, withTranslation, Trans } from 'react-i18next';
 import { useRouter } from 'next/navigation'
+import router from 'next/router';
 
 export default function LoginPage () {
   const { t, i18n } = useTranslation();
@@ -13,12 +14,20 @@ export default function LoginPage () {
 
   const login = async (formData: any) => {
     startLoading()
+    // await authFetch({
+    //   endpoint: 'login',
+    //   redirectRoute: '/protegida',
+    //   formData
+    // })
+    // finishLoading()
     await authFetch({
       endpoint: 'login',
-      redirectRoute: '/protegida',
       formData
-    })
-    finishLoading()
+    });
+    finishLoading();
+    const token = 'fictitious-token'; // Almacenar un token ficticio
+    login(token); // Guardar el token en el contexto de autenticación
+    router.push('/protegida');
   }
 
 return (

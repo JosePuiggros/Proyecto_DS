@@ -38,18 +38,18 @@ export function AuthProvider({ children }) {
     }
   }, []);
 
-  const logout = () => {
-    localStorage.removeItem('authToken'); // Eliminar token
-    setIsAuthenticated(false);
-    router.push('/login'); // Redirigir al login
+  const login = (token) => {
+    localStorage.setItem('authToken', token);
+    setIsAuthenticated(true);
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, logout }}>
+    <AuthContext.Provider value={{ isAuthenticated, login }}>
       {children}
     </AuthContext.Provider>
   );
 }
 
-export const useAuth = () => useContext(AuthContext);
-
+export function useAuth() {
+  return useContext(AuthContext);
+}
