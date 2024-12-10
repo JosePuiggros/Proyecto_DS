@@ -32,7 +32,7 @@ export function Navbar() {
           href="/login"
           className="bg-earth hover:bg-gray-600 text-gray-50 font-bold py-2 px-4 rounded text-base sm:text-lg"
         >
-          Iniciar Sesión
+          {t("inicioSesion")}
         </a>
       </div>
     </header>
