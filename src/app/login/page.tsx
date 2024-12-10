@@ -58,34 +58,34 @@ export default function LoginPage () {
 return (
   <div className="flex flex-col items-center justify-top min-h-screen !text-black p-0">
     <Form
-      title={t("Iniciar Sesion")}
+      title={t("inicioSesion")}
       onSubmit={login}
-      description={t("Formulario para iniciar sesión")}
+      description={t("formularioIniciarSesion")}
       className="w-full max-w-md bg-white rounded-lg shadow-md p-8 flex flex-col gap-4 !text-black"
     >
       <Form.Input
         label={t("correo")}
         name="email"
-        placeholder={t("Ingrese su correo")}
+        placeholder={t("ingresaCorreo")}
         className="bg-gray-100 text-black placeholder-gray-500"
       />
       <Form.Input
         label="Contraseña"
         name="password"
         type="password"
-        placeholder="Ingresa tu contraseña..."
+        placeholder={t("ingresaContrasena")}
         className="bg-gray-100 text-black placeholder-gray-500"
       />
-      <Form.SubmitButton buttonText={t("Iniciar Sesión")} isLoading={isLoading} />
+      <Form.SubmitButton buttonText={t("inicioSesion")} isLoading={isLoading} />
       <Form.Footer
-        description="¿Te olvidaste tu contraseña?"
+        description={t("olvidarContrasena")}
         link="/forget-password"
-        textLink="Recuperar contraseña"
+        textLink={t("recuperarContrasena")}
       />
       <Form.Footer
-        description="¿Aún no tienes cuenta?"
+        description={t("noCuenta")}
         link="/register"
-        textLink="Regístrate"
+        textLink={t("registrar")}
       />
     </Form>
   </div>

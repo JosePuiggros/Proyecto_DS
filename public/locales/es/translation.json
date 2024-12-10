@@ -14,5 +14,22 @@
     "eliminar": "Eliminar",
     "editar": "Editar",
     "recetaActualizada": "Receta actualizada",
-    "recetaEliminada": "Receta eliminada"
+    "recetaEliminada": "Receta eliminada",
+    "volverReceta": "Volver a recetas",
+    "formularioIniciarSesion": "Formulario para iniciar sesión",
+    "correo": "Correo",
+    "recuperarContrasena": "Recuperar contraseña",
+    "formularioRecuperarContrasena": "Formulario para recuperar contraseña",
+    "ingresaCorreo": "Ingrese su correo",
+    "ingresaContrasena": "Ingrese su contraseña",
+    "olvidarContrasena": "¿Olvidaste tu contraseña?",
+    "registrar": "Registrarse",
+    "noCuenta": "¿No tienes una cuenta?",
+    "volverInicio": "Volver al inicio",
+    "inicio": "Inicio",
+    "formularioCrearCuenta": "Formulario para crear cuenta",
+    "repiteContrasena": "Repite tu contraseña",
+    "crearCuenta": "Crear cuenta",
+    "yaCuenta": "¿Ya tienes una cuenta?",
+    "contrasena": "Contraseña"
   }

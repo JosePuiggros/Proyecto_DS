@@ -14,5 +14,22 @@
     "eliminar": "Delete",
     "editar": "Edit",
     "recetaActualizada": "Recipe updated",
-    "recetaEliminada": "Recipe deleted"
+    "recetaEliminada": "Recipe deleted",
+    "volverReceta": "Back to recipes",
+    "formularioIniciarSesion": "Form to log in",
+    "correo": "Email",
+    "recuperarContrasena": "Recover password",
+    "formularioRecuperarContrasena": "Form to recover password",
+    "ingresaCorreo": "Enter your email",
+    "ingresaContrasena": "Enter your password",
+    "olvidarContrasena": "Forgot your password?",
+    "registrar": "Register",
+    "noCuenta": "Don't have an account?",
+    "volverInicio": "Back to home",
+    "inicio": "Home",
+    "formularioCrearCuenta": "Form to create account",
+    "repiteContrasena": "Repeat your password",
+    "crearCuenta": "Create account",
+    "yaCuenta": "Already have an account?",
+    "contrasena": "Password"
   }

@@ -3,8 +3,10 @@
 import { Form } from '../../components/Form'
 import { useAuthFetch } from '../../hooks/useAuthFetch'
 import { useLoading } from '../../hooks/useLoading'
+import { useTranslation, withTranslation, Trans } from 'react-i18next';
 
 export default function LoginPage () {
+  const { t, i18n } = useTranslation();
   const { finishLoading, isLoading, startLoading } = useLoading()
   const authFetch = useAuthFetch()
 
@@ -22,33 +24,33 @@ export default function LoginPage () {
     <div className="flex flex-col items-center justify-top min-h-screen !text-black p-0 mt-0">
 
       <Form
-        title='Registrate'
+        title={t("registrar")}
         onSubmit={register}
-        description='Formulario para crear una cuenta'
+        description={t("formularioCrearCuenta")}
       >
         <div className='my-[10px] flex flex-col gap-4'>
           <Form.Input
-            label='Correo'
+            label={t("correo")}
             name='email'
-            placeholder='Ingresa tu correo...'
+            placeholder={t("ingresaCorreo")}
           />
           <Form.Input
-            placeholder='Ingresa tu contraseña...'
-            label='Contraseña'
+            placeholder={t("ingresaContrasena")}
+            label={t("contrasena")}
             name='password'
             type='password'
           />
           <Form.Input
-            placeholder='Repite tu contraseña...'
-            label='Contraseña'
+            placeholder={t("repiteContrasena")}
+            label={t("contrasena")}
             name='confirmPassword'
             type='password'
           />
         </div>
-        <Form.SubmitButton buttonText='Crear cuenta' isLoading={isLoading} />
+        <Form.SubmitButton buttonText={t("crearCuenta")} isLoading={isLoading} />
         <Form.Footer
-          description='Ya tienes cuenta?'
-          textLink='Inicia Sesión'
+          description={t("yaCuenta")}
+          textLink={t("inicioSesion")}
           link='/login'
         />
       </Form>

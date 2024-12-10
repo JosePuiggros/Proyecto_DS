@@ -22,24 +22,24 @@ export default function LoginPage () {
   return (
     <div className="flex flex-col items-center justify-top min-h-screen !text-black p-0">
       <Form
-        title={t("Recuperar contraseña")}
-        description={t("Formulario para recuperar contraseña")}
+        title={t("recuperarContrasena")}
+        description={t("formularioRecuperarContrasena")}
         onSubmit={forgetPassword}
       >
         <div className='my-[10px] flex flex-col gap-4'>
           <Form.Input
-            label={t("Ingrese su correo")}
+            label={t("ingresaCorreo")}
             name='email'
-            placeholder={t("ingresaTuCorreo")}
+            placeholder={t("ingresaCorreo")}
           />
         </div>
         <Form.SubmitButton
-          buttonText='Recuperar Contraseña'
+          buttonText={t("recuperarContrasena")}
           isLoading={isLoading}
         />
         <Form.Footer
-          description='Volver al inicio'
-          textLink='Inicio'
+          description={t("volverInicio")}
+          textLink={t("inicio")}
           link='/'
         />
       </Form>

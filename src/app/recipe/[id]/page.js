@@ -3,8 +3,10 @@
 import { useRecipes } from "../../../context/RecipesContext"; // Ajusta la ruta según tu estructura de archivos
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import { useTranslation, withTranslation, Trans } from 'react-i18next';
 
 const RecipePage = () => {
+    const { t, i18n } = useTranslation();
     const { id } = useParams();
     const { recipes } = useRecipes();
     const [recipe, setRecipe] = useState(null);
@@ -45,13 +47,13 @@ const RecipePage = () => {
 
             {/* Ingredientes */}
             <div className="bg-earth p-6 rounded-lg shadow-lg max-w-md w-full text-center mb-4">
-                <h2 className="font-bold text-2xl mb-4">Ingredientes</h2>
+                <h2 className="font-bold text-2xl mb-4">{t("ingredientes")}</h2>
                 <ul className="text-lg" style={{ whiteSpace: 'pre-line' }}>{ingredientesList}</ul>
             </div>
 
             {/* Pasos */}
             <div className="bg-earth p-6 rounded-lg shadow-lg max-w-md w-full text-center">
-                <h2 className="font-bold text-2xl mb-4">Pasos</h2>
+                <h2 className="font-bold text-2xl mb-4">{t("pasos")}</h2>
                 <ol className="text-lg" style={{ whiteSpace: 'pre-line' }}>{pasosList}</ol>
             </div>
 
@@ -60,7 +62,7 @@ const RecipePage = () => {
                 onClick={() => window.location.href = '/recipes'} 
                 className="mt-4 bg-beige hover:bg-orange text-white font-bold py-2 px-4 rounded"
             >
-                Volver a Recetas
+            {t("volverReceta")}
             </button>
         </div>
     );

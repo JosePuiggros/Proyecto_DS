@@ -32,6 +32,8 @@ const i18n = createInstance({
         "recuperarContrasena": "Recover password",
         "formularioRecuperarContrasena": "Form to recover password",
         "ingresarCorreo": "Enter your email",
+        "ingredientes": "Ingredients",
+        "volverReceta": "Back to recipes",
       },
     },
     es: {
@@ -57,6 +59,7 @@ const i18n = createInstance({
         "recuperarContrasena": "Recuperar contraseña",
         "formularioRecuperarContrasena": "Formulario para recuperar contraseña",
         "ingresarCorreo": "Ingrese su correo", 
+        "volverReceta": "Volver a recetas",
       },
     },
   },
